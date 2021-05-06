@@ -40,15 +40,18 @@ public class Stack {
     }
 
     public int size(){
-        return 0;
+        return empty() ? 0 :  numbers.length;
     }
 
     public int peek(){
-        return 0;
+        if (empty()){
+            System.err.println("Stack is empty");
+        }
+        return numbers[numbers.length - 1];
     }
 
     public void clear(){
-
+        numbers = null;
     }
 
     public void print(){
@@ -64,6 +67,14 @@ public class Stack {
     }
 
     public boolean contains(int number){
+        if (empty()){
+            return false;
+        }
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] == number){
+                return true;
+            }
+        }
         return false;
     }
 
