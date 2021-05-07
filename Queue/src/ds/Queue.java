@@ -2,7 +2,7 @@ package ds;
 
 public class Queue {
 
-    private int[] numbers;
+    protected int[] numbers;
 
     public void enqueue(int number){
         if (this.empty()){
